@@ -12,7 +12,7 @@ node('MAVEN') {
 
     stage('Archival'){
    // This step should not normally be used in your script. Consult the inline help for details.
-    archive 'GOL/gameoflife-web/target/*.war'
+    archive 'gameoflife-web/target/*.war'
     }
 
    }

@@ -7,7 +7,7 @@ node('MAVEN') {
 
     stage('Build the package'){
         //code build
-        git 'https://github.com/Santosh-Peddada/game-of-life.git'
+        sh 'mvn clean package'
     }
 
     stage('Archival'){
@@ -19,5 +19,5 @@ node('MAVEN') {
    // This step should not normally be used in your script. Consult the inline help for details.
    junit 'target/surefire-reports/*.xml'
    }
-   
+
 }

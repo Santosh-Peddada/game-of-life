@@ -12,12 +12,7 @@ node('MAVEN') {
 
     stage('Archival'){
    // This step should not normally be used in your script. Consult the inline help for details.
-    archive 'target/*.jar'
+    archive 'GOL/gameoflife-web/target/*.war'
     }
 
-    stage('Test-results'){
-   // This step should not normally be used in your script. Consult the inline help for details.
-   junit 'target/surefire-reports/*.xml'
    }
-
-}
